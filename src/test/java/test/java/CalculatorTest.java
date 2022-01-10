@@ -9,11 +9,9 @@ import static org.mockito.Mockito.when;
 import com.dhbw.Calculator1;
 import com.dhbw.DatabaseHandler;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigInteger;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,6 +25,7 @@ public class CalculatorTest {
 
   // class under test
   private Calculator1 calculator1;
+  // file to write results from testing to
   final String filename = "CalculatorHistoryTest.txt";
 
   @BeforeEach
@@ -143,7 +142,7 @@ public class CalculatorTest {
 
   @Test
   @DisplayName("writeToFile given valid input and expect same file input")
-  public void writeToFile_given_valid_input_expect_correct_file() throws FileNotFoundException {
+  public void writeToFile_given_valid_input_expect_correct_file() {
     // given when
     calculator1.writeToFile(BigInteger.valueOf(2), BigInteger.valueOf(3), BigInteger.valueOf(5),
         "+");

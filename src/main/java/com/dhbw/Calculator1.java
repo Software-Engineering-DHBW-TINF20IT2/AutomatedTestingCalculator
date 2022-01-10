@@ -6,9 +6,15 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigInteger;
 
+/**
+ * Example class Calculator1
+ * create to show automated testing
+ */
 public class Calculator1 {
 
+  // File to log results to
   private File output;
+  // Handler to write to database
   DatabaseHandler databaseHandler;
 
   /**
@@ -51,6 +57,13 @@ public class Calculator1 {
     return result;
   }
 
+  /**
+   * Write result to file
+   * @param a
+   * @param b
+   * @param result
+   * @param operation
+   */
   public void writeToFile(BigInteger a, BigInteger b, BigInteger result, String operation) {
     try {
       // create new, write and close file reader
@@ -63,6 +76,14 @@ public class Calculator1 {
 
   }
 
+  /**
+   * Write result to database
+   * @param a
+   * @param b
+   * @param result
+   * @param operation
+   * @return
+   */
   public boolean writeToDatabase(BigInteger a, BigInteger b, BigInteger result, String operation) {
     try {
       // write to database in case of production otherwise mock
