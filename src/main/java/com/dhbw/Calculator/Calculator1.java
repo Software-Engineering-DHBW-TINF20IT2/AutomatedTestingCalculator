@@ -1,4 +1,4 @@
-package com.dhbw;
+package com.dhbw.Calculator;
 
 import java.io.BufferedWriter;
 import java.io.File;

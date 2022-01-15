@@ -1,4 +1,4 @@
-package com.dhbw;
+package com.dhbw.Calculator;
 
 /**
  * Class that represents a database
